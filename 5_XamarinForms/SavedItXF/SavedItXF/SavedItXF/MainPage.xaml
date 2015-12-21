@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SavedItXF.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="20,40,20,20"
+                    Android="20,20,20,20"/>
+        
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="15">
+            <Label Text="Das habe ich mir gespart"/>
+            <Entry x:Name="DescriptionText" Placeholder="z. B. ein Kaffee, ein Burger"/>
+            <Label Text="Preis"/>
+            <Entry x:Name="PriceText" Placeholder="z. B.1,99"/>
+            <Button x:Name="saveButton" Text="Speichern" Clicked="OnSave"/>
+            <Label Text="Bisher gespart:"/>
+            <Label x:Name="TotalLabel" Text="0,00"/>
+            <Button x:Name="detailButton" Text="Details" Clicked="OnDetails"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
